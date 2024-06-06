@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'portfolio_site' // Docker imaj adı
         CONTAINER_NAME = 'portfolio_container' // Docker konteyner adı
-        PORT = '8089' // Web sitesi portu
+        PORT = '80' // Web sitesi portu
     }
 
     stages {
