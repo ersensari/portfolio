@@ -11,7 +11,7 @@ pipeline {
         stage('Clone Repository') {
             steps {
                 // GitHub reposunu klonlar
-                git 'https://github.com/ersensari/portfolio.git'
+                git branch: 'main', url: 'https://github.com/ersensari/portfolio.git'
             }
         }
         stage('Build Docker Image') {
