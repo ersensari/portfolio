@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background: url('melbourne.webp') no-repeat center center/cover;
+    background: url('melbourne.jpg') no-repeat center center/cover;
     height: 100vh;
     position: relative;
     display: flex;
@@ -20,6 +20,12 @@ header {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     text-align: center;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 header h1 {
@@ -30,6 +36,32 @@ header h1 {
 header p {
     font-size: 1.5em;
     margin-top: 0.5em;
+}
+
+nav {
+    background: #333;
+    padding: 10px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
 }
 
 #about {
@@ -54,12 +86,12 @@ header p {
     margin: 10px 0;
 }
 
-#skills, #experience, #contact {
+#skills, #contact {
     padding: 50px;
     background-color: #1a1a1a;
 }
 
-#skills h2, #experience h2, #contact h2 {
+#skills h2, #contact h2 {
     border-bottom: 2px solid #333;
     padding-bottom: 10px;
 }
@@ -76,34 +108,85 @@ header p {
     border-radius: 5px;
 }
 
+#experience {
+    padding: 50px;
+    background-color: #1a1a1a;
+}
+
+#experience h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 10px;
+}
+
 .timeline {
-    border-left: 2px solid #ffffff;
-    padding-left: 20px;
-    margin-top: 20px;
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px 0;
+    list-style: none;
 }
 
 .timeline-item {
-    margin-bottom: 20px;
+    padding: 20px 0;
     position: relative;
-    padding-left: 20px;
+    width: 50%;
+    margin-left: 50%;
+    clear: both;
+}
+
+.timeline-item:nth-child(odd) {
+    margin-left: 0;
 }
 
 .timeline-item::before {
-    content: "";
-    background-color: #ffffff;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
+    content: '';
     position: absolute;
-    left: -6px;
-    top: 5px;
-  }
+    top: 0;
+    bottom: 0;
+    left: -30px;
+    width: 3px;
+    background: #ffffff;
+}
 
-.timeline-item h3 {
-margin-top: 0;
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -13px;
+    background: #1e1e1e;
+    border: 4px solid #ffffff;
+    border-radius: 50%;
+    top: 15px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd)::after {
+    left: -13px;
+    right: auto;
+}
+
+.timeline-content {
+    background: #333333;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+}
+
+.timeline-content span {
+    display: block;
+    margin: 10px 0;
+}
+
+.timeline-content p {
+    margin: 0;
 }
 
 #contact a {
-color: #1e90ff;
-text-decoration: none;
+    color: #1e90ff;
+    text-decoration: none;
 }
