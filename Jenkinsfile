@@ -30,7 +30,7 @@ pipeline {
                     sh "docker rm ${CONTAINER_NAME} || true"
                     
                     // Yeni konteyneri başlatır
-                    sh "docker run -d --name ${CONTAINER_NAME} -p ${PORT}:8089 ${IMAGE_NAME}"
+                    sh "docker run -d --name ${CONTAINER_NAME} -p ${PORT}:80 ${IMAGE_NAME}"
                 }
             }
         }
