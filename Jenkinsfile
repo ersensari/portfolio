@@ -4,7 +4,7 @@ pipeline {
     environment {
         IMAGE_NAME = 'portfolio_site' // Docker imaj adı
         CONTAINER_NAME = 'portfolio_container' // Docker konteyner adı
-        PORT = '80' // Web sitesi portu
+        PORT = '8089' // Web sitesi portu
     }
 
     stages {
@@ -30,7 +30,7 @@ pipeline {
                     sh "docker rm ${CONTAINER_NAME} || true"
                     
                     // Yeni konteyneri başlatır
-                    sh "docker run -d --name ${CONTAINER_NAME} -p ${PORT}:80 ${IMAGE_NAME}"
+                    sh "docker run -d --name ${CONTAINER_NAME} -p ${PORT}:8089 ${IMAGE_NAME}"
                 }
             }
         }
