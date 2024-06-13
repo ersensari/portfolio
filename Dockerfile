@@ -1,5 +1,6 @@
 FROM nginx:latest
 
+RUN npm i
 RUN npm run pug
 RUN npm run sass
 
